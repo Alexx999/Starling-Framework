@@ -743,6 +743,7 @@ package starling.core
             if (event is MouseEvent)
             {
                 var mouseEvent:MouseEvent = event as MouseEvent;
+                if (!(mouseEvent.target is flash.display.Stage)) return;
                 globalX = mouseEvent.stageX;
                 globalY = mouseEvent.stageY;
                 touchID = 0;
